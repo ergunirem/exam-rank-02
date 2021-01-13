@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   get_next_line.c                                    :+:    :+:            */
+/*   get_next_linex.c                                   :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: icikrikc <icikrikc@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/11 17:35:22 by icikrikc      #+#    #+#                 */
-/*   Updated: 2021/01/11 22:50:22 by icikrikc      ########   odam.nl         */
+/*   Updated: 2021/01/12 09:00:33 by icikrikc      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_linex.h"
 
 int	ft_strlen(const char *s)
 {
@@ -93,6 +93,8 @@ char	*update_container(char *container)
 		return (NULL);
 	}
 	tmp = (char *)malloc(sizeof(char) * (ft_strlen(container) - i + 1));
+	if (!tmp)
+		return (NULL);
 	j = 0;
 	i++;
 	while (container[i])
